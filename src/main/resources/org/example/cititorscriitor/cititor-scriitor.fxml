@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+
+<?import javafx.scene.text.Text?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cititorscriitor.BookSimulation">
+
+      <Button fx:id="startButton" layoutX="320.0" layoutY="345.0" onAction="#startSimulation" prefHeight="27.0" prefWidth="32.0" />
+
+      <Ellipse fill="#c9c5bb" layoutX="251.0" layoutY="356.0" radiusX="16.0" radiusY="41.0" strokeType="INSIDE">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7789473533630371" green="0.13559454679489136" blue="0.13559454679489136" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Ellipse>
+      <Circle fill="#ffe6ad" layoutX="251.0" layoutY="293.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="235.0" layoutY="309.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="265.0" layoutY="309.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line endX="100.39999389648438" endY="324.1999816894531" layoutX="142.0" layoutY="-1.0" startX="80.80001068115234" startY="345.4000244140625" />
+      <Line endX="92.0" endY="350.79998779296875" layoutX="182.0" layoutY="-8.0" startX="72.99999237060547" startY="325.4000244140625" />
+      <Ellipse fill="#c9c5bb" layoutX="109.0" layoutY="357.0" radiusX="16.0" radiusY="41.0" strokeType="INSIDE">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7789473533630371" green="0.13559454679489136" blue="0.13559454679489136" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Ellipse>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b2630" height="164.0" layoutX="534.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" width="15.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b2630" height="158.0" layoutX="671.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="15.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b2630" height="158.0" layoutX="395.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="15.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b2630" height="10.0" layoutX="387.0" layoutY="294.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b2630" height="10.0" layoutX="387.0" layoutY="453.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b2630" height="10.0" layoutX="387.0" layoutY="348.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b2630" height="10.0" layoutX="387.0" layoutY="401.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="106.0" layoutX="22.0" layoutY="357.0" stroke="#532525" strokeType="INSIDE" width="354.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.3901515585003477">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7960233688354492" green="0.8307095766067505" blue="0.8631578683853149" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6639999747276306" green="1.0" blue="0.1599999964237213" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Circle fill="#ffe6ad" layoutX="109.0" layoutY="294.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="93.0" layoutY="309.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="122.0" layoutY="309.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line endX="102.39998626708984" endY="322.20001220703125" layoutX="1.0" layoutY="-2.0" startX="82.20000457763672" startY="347.6000061035156" />
+      <Line endX="92.0" endY="350.79998779296875" layoutX="40.0" layoutY="-7.0" startX="72.99999237060547" startY="325.4000244140625" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbf4dd" height="10.0" layoutX="22.0" layoutY="388.0" stroke="BLACK" strokeType="INSIDE" width="354.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbf4dd" height="10.0" layoutX="22.0" layoutY="423.0" stroke="BLACK" strokeType="INSIDE" width="354.0" />
+      <Rectangle fx:id="bookWriter1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="229.0" layoutY="352.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
+      <Rectangle fx:id="bookWriter2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="87.0" layoutY="352.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
+
+      <Rectangle fx:id="bookShelf1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="44.0" layoutX="582.0" layoutY="358.0" stroke="BLACK" strokeType="INSIDE" width="15.0"/>
+      <Rectangle fx:id="bookShelf2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="44.0" layoutX="410.0" layoutY="411.0" stroke="BLACK" strokeType="INSIDE" width="15.0" />
+      <Rectangle fx:id="bookShelf3" arcHeight="5.0" arcWidth="5.0" fill="RED" height="44.0" layoutX="446.0" layoutY="357.0" stroke="BLACK" strokeType="INSIDE" width="15.0" />
+      <Rectangle fx:id="bookShelf4" accessibleText="1" arcHeight="5.0" arcWidth="5.0" fill="#00ff49" height="44.0" layoutX="439.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" width="15.0" />
+      <Ellipse fill="#12eaf2" layoutX="724.0" layoutY="378.0" radiusX="16.0" radiusY="41.0" strokeType="INSIDE">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7789473533630371" green="0.13559454679489136" blue="0.13559454679489136" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Ellipse>
+      <Circle fill="#ffe6ad" layoutX="724.0" layoutY="315.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="716.0" layoutY="319.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="740.0" layoutY="317.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line endX="100.39999389648438" endY="324.1999816894531" layoutX="615.0" layoutY="21.0" startX="80.80001068115234" startY="345.4000244140625" />
+      <Line endX="92.0" endY="350.79998779296875" layoutX="655.0" layoutY="14.0" startX="72.99999237060547" startY="325.4000244140625" />
+      <Ellipse fill="#1361c7" layoutX="869.0" layoutY="380.0" radiusX="16.0" radiusY="41.0" strokeType="INSIDE">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7789473533630371" green="0.13559454679489136" blue="0.13559454679489136" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Ellipse>
+      <Circle fill="#ffe6ad" layoutX="869.0" layoutY="317.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="852.0" layoutY="325.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="877.0" layoutY="317.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line endX="100.39999389648438" endY="324.1999816894531" layoutX="760.0" layoutY="23.0" startX="80.80001068115234" startY="345.4000244140625" />
+      <Line endX="92.0" endY="350.79998779296875" layoutX="800.0" layoutY="16.0" startX="72.99999237060547" startY="325.4000244140625" />
+      <Ellipse layoutX="806.0" layoutY="380.0" radiusX="100.0" radiusY="22.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfcf56" height="67.0" layoutX="702.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfcf56" height="67.0" layoutX="847.0" layoutY="399.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
+      <Line endX="740.0" endY="461.0000305175781" layoutX="80.0" layoutY="2.0" startX="740.0" startY="400.0000305175781" strokeWidth="5.0" />
+      <Line endX="760.0" endY="461.0000305175781" layoutX="-14.0" layoutY="3.0" startX="760.0" startY="388.699951171875" strokeWidth="5.0" />
+      <Line endX="760.0" endY="461.0000305175781" layoutX="8.0" layoutY="3.0" startX="760.0" startY="398.0000305175781" strokeWidth="5.0" />
+      <Line endX="760.0" endY="461.0000305175781" layoutX="90.0" layoutY="3.0" startX="760.0" startY="398.0000305175781" strokeWidth="5.0" />
+      <Rectangle fx:id="bookReader1" arcHeight="5.0" arcWidth="5.0" fill="RED" height="10.0" layoutX="724.0" layoutY="366.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
+      <Rectangle fx:id="bookReader2" arcHeight="5.0" arcWidth="5.0" fill="#00ff49" height="10.0" layoutX="831.0" layoutY="366.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
+   </Pane>
+
