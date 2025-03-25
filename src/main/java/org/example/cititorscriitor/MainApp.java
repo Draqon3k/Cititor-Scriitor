@@ -16,9 +16,6 @@ public class MainApp extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("cititor-scriitor.fxml"));
         Pane root = loader.load();
 
-        // Accesăm controller-ul pentru a ne asigura că se inițializează corect
-        BookSimulation controller = loader.getController();
-
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Writer and Reader Simulation");

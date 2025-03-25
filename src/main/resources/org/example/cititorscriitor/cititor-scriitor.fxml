@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 
-<?import javafx.scene.text.Text?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cititorscriitor.BookSimulation">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cititorscriitor.BookSimulation">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b1b0ae" height="475.0" layoutX="-2.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="918.0" />
 
       <Button fx:id="startButton" layoutX="320.0" layoutY="345.0" onAction="#startSimulation" prefHeight="27.0" prefWidth="32.0" />
 
@@ -31,7 +37,7 @@
       <Circle fill="#ffe6ad" layoutX="251.0" layoutY="293.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="WHITE" layoutX="235.0" layoutY="309.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="WHITE" layoutX="265.0" layoutY="309.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-      <Line endX="100.39999389648438" endY="324.1999816894531" layoutX="142.0" layoutY="-1.0" startX="80.80001068115234" startY="345.4000244140625" />
+      <Line endX="127.20001220703125" endY="248.10000610351562" fill="#ddff00" layoutX="53.0" layoutY="-142.0" startX="80.80001068115234" startY="345.4000244140625" stroke="#eeff00" />
       <Line endX="92.0" endY="350.79998779296875" layoutX="182.0" layoutY="-8.0" startX="72.99999237060547" startY="325.4000244140625" />
       <Ellipse fill="#c9c5bb" layoutX="109.0" layoutY="357.0" radiusX="16.0" radiusY="41.0" strokeType="INSIDE">
          <stroke>
@@ -79,14 +85,14 @@
       <Circle fill="#ffe6ad" layoutX="109.0" layoutY="294.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="WHITE" layoutX="93.0" layoutY="309.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="WHITE" layoutX="122.0" layoutY="309.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-      <Line endX="102.39998626708984" endY="322.20001220703125" layoutX="1.0" layoutY="-2.0" startX="82.20000457763672" startY="347.6000061035156" />
+      <Line fx:id="hand1" endX="102.39998626708984" endY="322.20001220703125" layoutX="1.0" layoutY="-2.0" startX="82.20000457763672" startY="347.6000061035156" />
       <Line endX="92.0" endY="350.79998779296875" layoutX="40.0" layoutY="-7.0" startX="72.99999237060547" startY="325.4000244140625" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbf4dd" height="10.0" layoutX="22.0" layoutY="388.0" stroke="BLACK" strokeType="INSIDE" width="354.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbf4dd" height="10.0" layoutX="22.0" layoutY="423.0" stroke="BLACK" strokeType="INSIDE" width="354.0" />
       <Rectangle fx:id="bookWriter1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="229.0" layoutY="352.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
       <Rectangle fx:id="bookWriter2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="87.0" layoutY="352.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
 
-      <Rectangle fx:id="bookShelf1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="44.0" layoutX="582.0" layoutY="358.0" stroke="BLACK" strokeType="INSIDE" width="15.0"/>
+      <Rectangle fx:id="bookShelf1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="44.0" layoutX="582.0" layoutY="358.0" stroke="BLACK" strokeType="INSIDE" width="15.0" />
       <Rectangle fx:id="bookShelf2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="44.0" layoutX="410.0" layoutY="411.0" stroke="BLACK" strokeType="INSIDE" width="15.0" />
       <Rectangle fx:id="bookShelf3" arcHeight="5.0" arcWidth="5.0" fill="RED" height="44.0" layoutX="446.0" layoutY="357.0" stroke="BLACK" strokeType="INSIDE" width="15.0" />
       <Rectangle fx:id="bookShelf4" accessibleText="1" arcHeight="5.0" arcWidth="5.0" fill="#00ff49" height="44.0" layoutX="439.0" layoutY="305.0" stroke="BLACK" strokeType="INSIDE" width="15.0" />
@@ -109,8 +115,8 @@
          </stroke>
       </Ellipse>
       <Circle fill="#ffe6ad" layoutX="724.0" layoutY="315.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="WHITE" layoutX="716.0" layoutY="319.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="WHITE" layoutX="740.0" layoutY="317.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="ochi1" fill="WHITE" layoutX="716.0" layoutY="319.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="ochi2" fill="WHITE" layoutX="740.0" layoutY="317.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
       <Line endX="100.39999389648438" endY="324.1999816894531" layoutX="615.0" layoutY="21.0" startX="80.80001068115234" startY="345.4000244140625" />
       <Line endX="92.0" endY="350.79998779296875" layoutX="655.0" layoutY="14.0" startX="72.99999237060547" startY="325.4000244140625" />
       <Ellipse fill="#1361c7" layoutX="869.0" layoutY="380.0" radiusX="16.0" radiusY="41.0" strokeType="INSIDE">
@@ -132,8 +138,8 @@
          </stroke>
       </Ellipse>
       <Circle fill="#ffe6ad" layoutX="869.0" layoutY="317.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="WHITE" layoutX="852.0" layoutY="325.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="WHITE" layoutX="877.0" layoutY="317.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="ochi3" fill="WHITE" layoutX="852.0" layoutY="325.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="ochi4" fill="WHITE" layoutX="877.0" layoutY="317.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
       <Line endX="100.39999389648438" endY="324.1999816894531" layoutX="760.0" layoutY="23.0" startX="80.80001068115234" startY="345.4000244140625" />
       <Line endX="92.0" endY="350.79998779296875" layoutX="800.0" layoutY="16.0" startX="72.99999237060547" startY="325.4000244140625" />
       <Ellipse layoutX="806.0" layoutY="380.0" radiusX="100.0" radiusY="22.0" stroke="BLACK" strokeType="INSIDE" />
@@ -145,5 +151,29 @@
       <Line endX="760.0" endY="461.0000305175781" layoutX="90.0" layoutY="3.0" startX="760.0" startY="398.0000305175781" strokeWidth="5.0" />
       <Rectangle fx:id="bookReader1" arcHeight="5.0" arcWidth="5.0" fill="RED" height="10.0" layoutX="724.0" layoutY="366.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
       <Rectangle fx:id="bookReader2" arcHeight="5.0" arcWidth="5.0" fill="#00ff49" height="10.0" layoutX="831.0" layoutY="366.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
+   <Line endX="259.2928771972656" endY="42.89997100830078" layoutX="-60.0" layoutY="1.0" startX="259.2928771972656" startY="6.10351571594947E-6" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="16.0" layoutX="197.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+   <Circle fill="#fcf98d" layoutX="199.0" layoutY="74.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+   <Arc layoutX="200.0" layoutY="82.0" length="180.0" radiusX="31.0" radiusY="30.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+   <Line endX="259.2928771972656" endY="42.89997100830078" layoutX="435.0" layoutY="-3.0" startX="259.2928771972656" startY="6.10351571594947E-6" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="16.0" layoutX="692.0" layoutY="32.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+   <Circle fill="#fcf98d" layoutX="694.0" layoutY="70.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+   <Arc layoutX="695.0" layoutY="78.0" length="180.0" radiusX="31.0" radiusY="30.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#846522" height="23.0" layoutX="-13.0" layoutY="458.0" stroke="BLACK" strokeType="INSIDE" width="928.0" />
+   <Line endX="259.2928771972656" endY="42.89997100830078" layoutX="195.0" layoutY="1.0" startX="259.2928771972656" startY="6.10351571594947E-6" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="16.0" layoutX="452.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+   <Circle fill="#fcf98d" layoutX="454.0" layoutY="74.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+   <Arc layoutX="455.0" layoutY="82.0" length="180.0" radiusX="31.0" radiusY="30.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+   <Line endX="127.20001220703125" endY="248.10000610351562" fill="#ddff00" layoutX="63.0" layoutY="-132.0" startX="115.60000610351562" startY="387.70001220703125" stroke="#eeff00" />
+   <Line endX="133.60000610351562" endY="236.89999389648438" fill="#ddff00" layoutX="73.0" layoutY="-122.0" startX="154.39999389648438" startY="370.5" stroke="#eeff00" />
+   <Line endX="139.60000610351562" endY="213.29998779296875" fill="#ddff00" layoutX="83.0" layoutY="-112.0" startX="207.60000610351562" startY="339.70001220703125" stroke="#eeff00" />
+   <Line endX="336.8000183105469" endY="204.89999389648438" fill="#ddff00" layoutX="93.0" layoutY="-102.0" startX="270.3999938964844" startY="335.29998779296875" stroke="#eeff00" />
+   <Line endX="336.8000183105469" endY="204.89999389648438" fill="#ddff00" layoutX="103.0" layoutY="-92.0" startX="326.0000305175781" startY="341.29998779296875" stroke="#eeff00" />
+   <Line endX="349.6000061035156" endY="197.70001220703125" fill="#ddff00" layoutX="113.0" layoutY="-82.0" startX="369.6000061035156" startY="330.5" stroke="#eeff00" />
+   <Line endX="358.0000305175781" endY="178.10000610351562" fill="#ddff00" layoutX="123.0" layoutY="-72.0" startX="417.199951171875" startY="275.70001220703125" stroke="#eeff00" />
+   <Line endX="533.5999755859375" endY="152.89999389648438" fill="#ddff00" layoutX="133.0" layoutY="-62.0" startX="474.39996337890625" startY="272.8999938964844" stroke="#eeff00" />
+   <Line endX="542.0" endY="155.70001220703125" fill="#ddff00" layoutX="143.0" layoutY="-52.0" startX="509.199951171875" startY="301.29998779296875" stroke="#eeff00" />
+   <Line endX="554.3999633789062" endY="145.70001220703125" fill="#ddff00" layoutX="153.0" layoutY="-42.0" startX="593.5999755859375" startY="291.29998779296875" stroke="#eeff00" />
+   <Line endX="558.0" endY="121.0" fill="#ddff00" layoutX="163.0" layoutY="-32.0" startX="617.199951171875" startY="202.60000610351562" stroke="#eeff00" />
+   <Line fx:id="hand2" endX="102.39998626708984" endY="322.20001220703125" layoutX="142.0" layoutY="-2.0" startX="82.20000457763672" startY="347.6000061035156" />
    </Pane>
-
