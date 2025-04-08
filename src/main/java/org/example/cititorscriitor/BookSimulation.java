@@ -13,6 +13,7 @@ import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class BookSimulation {
     @FXML
@@ -33,6 +34,7 @@ public class BookSimulation {
 
     private final ExecutorService executorService = Executors.newFixedThreadPool(2);
     private final LinkedBlockingQueue<Rectangle> shelf = new LinkedBlockingQueue<>(4);
+    private final ReentrantLock lock = new ReentrantLock(); // Blocaj pentru exclusivitate mutuală
 
     public void initialize() {
         bookWriter1.setVisible(false);
@@ -136,31 +138,15 @@ public class BookSimulation {
         }).start();
     }
 
-    // Clasa Writer implementează Runnable, deci poate fi rulată ca un thread separat
     class Writer implements Runnable {
-
-        // Obiectul principal al simulării, folosit pentru acces la metode comune
         private final BookSimulation simulation;
-
-        // ID-ul scriitorului (pentru identificare/logging)
         private final int writerId;
-
-        // Numărul total de cărți pe care scriitorul trebuie să le scrie
         private final int booksToWrite;
-
-        // Reprezentarea grafică a scriitorului (dreptunghi)
         private final Rectangle writerRectangle;
-
-        // Linia care reprezintă mâna scriitorului în interfața grafică
         private final Line hand;
-
-        // Array cu toate sloturile (pozițiile) disponibile pe raft
         private final Rectangle[] shelfSlots;
-
-        // Indexul de start pe raft pentru acest scriitor
         private final int startIndex;
 
-        // Constructorul clasei care setează toate valorile necesare simulării
         public Writer(BookSimulation simulation, int writerId, int booksToWrite,
                       Rectangle writerRectangle, Line hand, Rectangle[] shelfSlots, int startIndex) {
             this.simulation = simulation;
@@ -172,52 +158,33 @@ public class BookSimulation {
             this.startIndex = startIndex;
         }
 
-        // Metoda run() este apelată automat când firul pornește
         @Override
         public void run() {
-            // Scriitorul va scrie atâtea cărți cât a fost specificat
             for (int i = 0; i < booksToWrite; i++) {
+                simulation.lock.lock(); // Asigură exclusivitate mutuală
                 try {
-                    // Afișează scriitorul în UI și îl colorează în roșu pentru a indica că scrie
                     Platform.runLater(() -> {
-                        writerRectangle.setVisible(true); // face scriitorul vizibil
-                        writerRectangle.setFill(Color.RED); // culoare roșie = scriere
+                        writerRectangle.setVisible(true);
+                        writerRectangle.setFill(Color.RED);
                     });
-
-                    // Animația mâinii scriitorului care se mișcă (logică definită în BookSimulation)
                     simulation.moveHand(hand);
-
-                    // Simulează timpul de scriere (2 secunde)
                     Thread.sleep(2000);
-
-                    // Se selectează slotul de pe raft unde va fi pusă cartea
                     Rectangle shelfSlot = shelfSlots[startIndex + i];
-
-                    // Afișează cartea pe raft și ascunde scriitorul
                     Platform.runLater(() -> {
-                        writerRectangle.setVisible(false); // ascunde scriitorul după scriere
-                        shelfSlot.setFill(Color.BLUE); // culoare albastră = carte scrisă
-                        shelfSlot.setVisible(true); // face slotul vizibil
+                        writerRectangle.setVisible(false);
+                        shelfSlot.setFill(Color.BLUE);
+                        shelfSlot.setVisible(true);
                     });
-
-                    // Încearcă să adauge cartea în raftul sincronizat (coadă blocantă)
-                    if (!simulation.shelf.offer(shelfSlot, 1, java.util.concurrent.TimeUnit.SECONDS)) {
-                        // Dacă nu reușește în 1 secundă, înseamnă că raftul e plin
-                        System.out.println("Writer " + writerId + ": Shelf is full, could not add book.");
-                    }
-
-                    // Pauză de 1 secundă între scrierea cărților
+                    simulation.shelf.put(shelfSlot); // Așteaptă până când raftul are spațiu
                     Thread.sleep(1000);
-
                 } catch (InterruptedException e) {
-                    // Dacă thread-ul este întrerupt, oprește execuția
                     System.out.println("Writer " + writerId + " was interrupted.");
-                    Thread.currentThread().interrupt(); // setează flag-ul de întrerupere
-                    break; // ieșire din buclă
+                    Thread.currentThread().interrupt();
+                    break;
+                } finally {
+                    simulation.lock.unlock(); // Eliberează blocajul
                 }
             }
-
-            // La final, scriitorul anunță că a terminat de scris toate cărțile
             System.out.println("Writer " + writerId + " finished writing " + booksToWrite + " books.");
         }
     }
